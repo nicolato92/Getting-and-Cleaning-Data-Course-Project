@@ -1,0 +1,36 @@
+---
+title: "Codebook"
+author: "Me"
+date: "25 de diciembre de 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data
+The database forms a tidy dataset, made from independent files of variables and labels obtained from the web, in the context of the Getting and Cleaning Data course.
+
+The data was obtained from the following cases:
+1. The variables, activity labels and subject identifier for training and test records were joined vertically.
+2. Training and test data were joined horizontally
+3. Only the average and standard deviation variables were extracted in the resulting database
+4. Descriptive activity tags were incorporated using the "activity_labels.txt" file
+5. Descriptive names were incorporated into the measurement variables using the file "features.txt"
+6. An independent tidy dataset was created using the "aggregate" function, calculating the average of each variable, for each subject and activity
+
+## Variables
+The variables come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ from measurements to people using a Samsung Galaxy II device.
+X, Y, Z denotes each of the three dimensions. In that way, we can decompose the variable names according to:
+1. "f" prefix: denotes a fast fourier transform applied to the measurement
+2. "t" prefix: denotes time, because the measurements was captured at a constant rate of 50 Hz
+3. "Body": denotes a variable corresponding to a body linear acceleration or angular velocity
+4. "Gravity": denotes a gravity acceleration signal
+5. "Jerk": corresponding to Jerk signals, obtained from body acceleration and angular velocity
+6. "Mag": obtained from applied Euclidean norm to gravity, body acceleration or body gyroscope measurements
+7. "Acc": lineal acceleration 
+8. "Gyro": angular velocity
+
+
+
